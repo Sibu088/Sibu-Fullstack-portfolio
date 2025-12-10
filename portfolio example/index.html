@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sibusiso Makhiwane - Portfolio</title>
+   
+<style>
+/* ===== Global Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== Header & Navigation ===== */
+header {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #3498db;
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.mobile-menu span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('public/pop.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 120px 0 80px;
+    margin-top: 70px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+    animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.btn:hover {
+    background: #2980b9;
+}
+
+/* ===== Sections ===== */
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: black;
+}
+
+/* ===== About Section ===== */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 60px 20px;
+}
+
+.about-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ddd;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-img:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.about-text {
+    flex: 1;
+    max-width: 700px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    animation: fadeInUp 1s ease forwards;
+}
+
+/* ===== Skills Section ===== */
+.skills {
+    background: white;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skill-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1), 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.skill-card:hover {
+    transform: translateY(-12px) rotateX(4deg) rotateY(4deg) scale(1.05);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.3), 0 25px 50px rgba(0,0,0,0.15);
+}
+
+.skill-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* ===== Projects Section ===== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    perspective: 1200px;
+}
+
+.project-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.project-card-front,
+.project-card-back {
+    position: absolute;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+}
+
+.project-card-front {
+    background-color: #fff;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1), 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.project-card-front:hover {
+    transform: translateY(-12px) rotateX(4deg) rotateY(4deg) scale(1.05);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.3), 0 25px 50px rgba(0,0,0,0.15);
+}
+
+.project-card-back {
+    background-color: #f1f1f1;
+    transform: rotateY(180deg);
+    padding: 1rem;
+    box-shadow: inset 0 5px 15px rgba(0,0,0,0.05), 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.project-card-inner.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.project-img {
+    background: linear-gradient(to right, #00c853, #00bfa5);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+.project-content {
+    padding: 1rem;
+    background-color: white;
+}
+
+.project-title {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    background: linear-gradient(90deg, #00c853, #00bfa5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.project-description {
+    margin-bottom: 0.8rem;
+    color: #555;
+}
+
+.project-tech {
+    margin-bottom: 0.8rem;
+}
+
+.tech-tag {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-right: 5px;
+    font-size: 0.75rem;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.tech-tag:hover {
+    transform: scale(1.2);
+    background-color: #c0392b;
+}
+
+.project-links {
+    margin-top: 15px;
+}
+
+.project-links a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: 500;
+    margin-right: 15px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.project-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #3498db;
+    left: 0;
+    bottom: -2px;
+    transition: width 0.3s ease;
+}
+
+.project-links a:hover {
+    color: #0056b3;
+}
+
+.project-links a:hover::after {
+    width: 100%;
+}
+
+/* ===== Contact Section ===== */
+.contact {
+    background: white;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.contact-info h3 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* ===== Footer ===== */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #3498db;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .mobile-menu { display: flex; }
+    .hero h1 { font-size: 2rem; }
+    .about-content { flex-direction: column; text-align: center; }
+    .contact-content { grid-template-columns: 1fr; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .projects-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+    .container { padding: 0 15px; }
+    .hero { padding: 100px 0 60px; }
+    section { padding: 60px 0; }
+}
+
+/* ===== Hero Image & Content ===== */
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.hero-image img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 15px rgba(255,255,255,0.3);
+    transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.05);
+}
+
+.hero-text { max-width: 500px; }
+
+@media (max-width: 768px) {
+    .hero-content { flex-direction: column; text-align: center; }
+    .hero-image img { width: 130px; height: 130px; }
+}
+/* ===== BUTTON CONTAINER ===== */
+.resume-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* ===== VIEW BUTTON ===== */
+.view-btn {
+    padding: 14px 30px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0, 153, 255, 0.7);
+    transition: 0.3s;
+}
+
+.view-btn:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 0 22px rgba(0, 153, 255, 1);
+}
+
+/* ===== DOWNLOAD BUTTON ===== */
+.download-btn {
+    padding: 14px 30px;
+    background: #111;
+    border: 2px solid #00c6ff;
+    border-radius: 50px;
+    color: #00c6ff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.download-btn:hover {
+    background: #00c6ff;
+    color: #fff;
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 153, 255, 0.7);
+}
+
+/* ===== MODAL BACKDROP ===== */
+.resume-modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.4s ease;
+}
+
+/* ===== MODAL CONTENT ===== */
+.resume-modal-content {
+    background: #0d0d0d;
+    margin: 4% auto;
+    width: 80%;
+    height: 85%;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 153, 255, 0.5);
+    position: relative;
+    animation: slideDown 0.4s ease;
+    overflow: hidden;
+}
+
+/* ===== CLOSE BUTTON ===== */
+.resume-close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 2rem;
+    color: #00c6ff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.resume-close:hover {
+    color: #fff;
+}
+
+/* ===== PDF VIEW ===== */
+.resume-modal iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+</style>
+
+</head>
+<script>
+const projectCards = document.querySelectorAll('.project-card');
+projectCards.forEach(card => {
+  card.addEventListener('click', () => {
+    const inner = card.querySelector('.project-card-inner');
+    inner.classList.toggle('is-flipped');
+  });
+});
+</script>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+  <div class="container hero-content">
+    <div class="hero-image">
+      <img src="public/Monaco.jpg" alt="Sibu Makhiwane" />
+    </div>
+    <div class="hero-text">
+      <h1>Sibu Makhiwane</h1>
+      <p>Full Stack Developer & UI/UX Designer</p>
+      <a href="#contact" class="btn">Get In Touch</a>
+    </div>
+    <div class="resume-buttons">
+    <button class="view-btn" onclick="openResumeModal()">View Resume 🚀</button>
+    <a href="public/Sibusiso_Makhiwane_Resume_Updated.pdf" download class="download-btn">Download ⬇️</a>
+    <!-- ===== RESUME POPUP MODAL ===== -->
+<div id="resumeModal" class="resume-modal">
+    <div class="resume-modal-content">
+        <span class="resume-close" onclick="closeResumeModal()">&times;</span>
+        <iframe src="public/Sibusiso_Makhiwane_Resume_Updated.pdf"></iframe>
+    </div>
+    
+    <script>
+function openResumeModal() {
+    document.getElementById("resumeModal").style.display = "block";
+}
+
+function closeResumeModal() {
+    document.getElementById("resumeModal").style.display = "none";
+}
+
+// Close when clicking outside modal
+window.onclick = function(event) {
+    const modal = document.getElementById("resumeModal");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</div>
+</div>
+
+  </div>
+</section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <img src="public/bro .jpg" alt="Profile" class="about-img">
+
+                <div class="about-text">
+                    <p>I'm Sibusiso Makhiwane, a passionate full-stack developer and founder of <strong>SibuCodeLab</strong>, with over a year of hands-on experience crafting impactful digital solutions. I specialize in building responsive, high-performance web applications using modern technologies like HTML, CSS, JavaScript, Python, Django, Node.js, and React.</p>
+
+<p>Beyond code, I’m dedicated to continuous learning—exploring the latest tech trends, contributing to open-source projects, and building innovative tools that blend functionality with creativity. Whether it’s creating smart user experiences or architecting scalable backend systems, I thrive on turning ideas into real-world products.</p>
+
+<p>Fueled by coffee and curiosity, I’m on a mission to develop modern, meaningful apps that not only solve problems but leave a lasting impression.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">💻</div>
+                    <h3>Frontend Development</h3>
+                    <p>HTML, CSS, JavaScript, React, Spring, Firebase, Django</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">⚙️</div>
+                    <h3>Backend Development</h3>
+                    <p>Node.js, Python, PHP, MongoDB, MySQL, Render, Netlify, Replit, GitHub</p>
+                </div>
+        </div>
+    </section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects">
+  <div class="container">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
+
+      <!-- Project 1 -->
+      <div class="project-card">
+        <div class="project-img">Banking App</div>
+        <div class="project-content">
+          <h3 class="project-title">Capitec App</h3>
+          <p class="project-description">
+            A modern mobile banking app featuring secure login, transaction tracking, and sleek UI.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://enchanting-maamoul-60f2fc.netlify.app/" target="_blank">🌐 Live Demo</a>
+            <a href="https://github.com/Sibu088/Capitec-App.git" target="_blank">💻 GitHub</a>
+            <a href="#home" class="back-home-btn">🏠 Back to Home</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <div class="project-img">Task Manager</div>
+        <div class="project-content">
+          <h3 class="project-title">Notepad App</h3>
+          <p class="project-description">
+            A productivity app with smart reminders, calendar, and organized notes.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">React.js</span>
+            <span class="tech-tag">CSS</span>
+          </div>
+          <div class="project-links">
+            <a href="https://sibu088.github.io/Notepad-app/" target="_blank">🌐 Live Demo</a>
+            <a href="https://github.com/Sibu088/Notepad-app" target="_blank">💻 GitHub</a>
+            <a href="#home" class="back-home-btn">🏠 Back to Home</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <div class="project-img">Weather App</div>
+        <div class="project-content">
+          <h3 class="project-title">Weather Dashboard</h3>
+          <p class="project-description">Real-time weather updates using API.</p>
+          <div class="project-tech">
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">API</span>
+          </div>
+          <div class="project-links">
+            <a href="https://sibu088.github.io/Weather-App/" target="_blank">🌐 Live Demo</a>
+            <a href="https://github.com/Sibu088/Weather-App" target="_blank">💻 GitHub</a>
+            <a href="#home" class="back-home-btn">🏠 Back to Home</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-card">
+        <div class="project-img">Employee CRUD</div>
+        <div class="project-content">
+          <h3 class="project-title">Employee CRUD App</h3>
+          <p class="project-description">Manage employees with create, read, update, delete functionality.</p>
+          <div class="project-tech">
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Firebase</span>
+            <span class="tech-tag">React.js</span>
+            <span class="tech-tag">HTMX</span>
+          </div>
+          <div class="project-links">
+            <a href="https://sibu088.github.io/employee-crud-firebase/" target="_blank">🌐 Live Demo</a>
+            <a href="https://github.com/Sibu088/employee-crud-firebase" target="_blank">💻 GitHub</a>
+            <a href="#home" class="back-home-btn">🏠 Back to Home</a>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <!-- Project 6 -->
+      <div class="project-card">
+        <div class="project-img">Alien Game</div>
+        <div class="project-content">
+          <h3 class="project-title">Alien Invasion Game</h3>
+          <p class="project-description">Defend Earth against alien waves. Built with Pygame.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Pygame</span>
+          </div>
+          <div class="project-links">
+            <a href="https://www.youtube.com/watch?v=6cNPqw-WizY" target="_blank">🌐 Live Demo</a>
+            <a href="https://github.com/Sibu088/Python" target="_blank">💻 GitHub</a>
+            <a href="#home" class="back-home-btn">🏠 Back to Home</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 7 -->
+      <div class="project-card">
+        <div class="project-img">Sibu Game Comments App</div>
+        <div class="project-content">
+          <h3 class="project-title">Sibu Game Comments App</h3>
+          <p class="project-description">A web app for users to leave comments on games and play free games in a wishlist.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Fullstack</span>
+            <span class="tech-tag">MERN Stack</span>
+            <span class="tech-tag">React.js</span>
+          </div>
+          <div class="project-links">
+            <a href="https://sibu088.github.io/sibu-comments-app/" target="_blank">🌐 Live Demo</a>
+            <a href="https://github.com/Sibu088/sibu-comments-app" target="_blank">💻 GitHub</a>
+            <a href="#home" class="back-home-btn">🏠 Back to Home</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 8 -->
+      <div class="project-card">
+        <div class="project-img">QR Code Generator</div>
+        <div class="project-content">
+          <h3 class="project-title">QR Code Generator App</h3>
+          <p class="project-description">
+            Easily generate QR codes from custom user input. Useful for sharing links, text, and contact info.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Django</span>
+          </div>
+          <div class="project-links">
+            <a href="https://qr-code-sibusisomakhiwa.replit.app" target="_blank">🌐 Live Demo</a>
+            <a href="https://github.com/Sibu088/Qr-Code.git" target="_blank">💻 GitHub</a>
+            <a href="#home" class="back-home-btn">🏠 Back to Home</a>
+          </div>
+        </div>
+      </div>
+
+    <!-- Project 10 -->
+<div class="project-card">
+  <div class="project-img">MedTech Connect</div>
+  <div class="project-content">
+    <h3 class="project-title">MedTech Connect</h3>
+    <p class="project-description">
+      I helped a client launch MedTech Connect — a next-gen healthcare connectivity platform now live and running smoothly.
+    </p>
+    <p class="project-description">
+      <strong>My Role:</strong><br>
+      • Full deployment on Render<br>
+      • Setup, configuration, security, and scaling<br>
+      • Ensured performance, responsiveness, and reliability
+    </p>
+    <div class="project-tech">
+      <span class="tech-tag">Django</span>
+      <span class="tech-tag">PostgreSQL</span>
+      <span class="tech-tag">Render</span>
+      <span class="tech-tag">Tailwind CSS</span>
+    </div>
+    <div class="project-links">
+      <a href="https://medtechconnect-1.onrender.com/" target="_blank">🌐 Live Demo</a>
+      <a href="https://github.com/Sibu088/MedTechConnect.git" target="_blank">💻 GitHub</a>
+      <a href="#home" class="back-home-btn">🏠 Back to Home</a>
+    </div>
+  </div>
+</div>
+
+ <!-- Project 11 -->
+<div class="project-card">
+  <div class="project-img">Platform-Aware-CodeDebugger-AI</div>
+  <div class="project-content">
+    <h3 class="project-title">Platform-Aware-CodeDebugger-AI</h3>
+    <p class="project-description">
+      A platform-aware AI code debugger that intelligently analyzes and debugs code across multiple programming languages, enhancing developer productivity.
+    </p>
+    <p class="project-description">
+      <strong>My Role:</strong><br>
+      • Full-stack development<br>
+      • Implemented AI-driven debugging features<br>
+    </p>
+    <p > Has old version ai and new version ai from replit.</p>
+    <div class="project-tech">
+      <span class="tech-tag">React</span>
+      <span class="tech-tag">Tailwind CSS</span>
+      <span class="tech-tag">JavaScript</span>
+      <span class="tech-tag">PostgreSQL</span>
+    </div>
+    <div class="project-links">
+      <a href="https://code-debugger-ai--mavismadira6.replit.app" target="_blank">🌐 Live Demo</a>
+       <a href="https://github.com/Sibu088/Platform-Aware-CodeDebugger-AI.git" target="_blank">💻 GitHub</a>
+      <a href="#home" class="back-home-btn">🏠 Back to Home</a>
+
+
+
+      
+
+<!-- 📞 Contact Section -->
+<section id="contact" class="contact">
+  <div class="container">
+
+    <h2 class="section-title pro-title">Get In Touch</h2>
+
+    <div class="contact-card professional">
+
+      <!-- Left Content -->
+      <div class="contact-left">
+        <h3 class="contact-heading-pro">Let’s Work Together</h3>
+        <p class="contact-text-pro">
+          I'm open to new opportunities, collaborations, internships,
+          freelance work, and any exciting tech projects.
+          If you'd like to create something impactful, feel free to reach out.
+        </p>
+
+        <div class="contact-detail">
+          <i class="pro-icon">📧</i>
+          <span>Email: <strong>Sibusisomakhiwane61@gmail.com</strong></span>
+        </div>
+
+        <div class="contact-detail">
+          <i class="pro-icon">📱</i>
+          <span>Phone: <strong>063 203 1993</strong></span>
+        </div>
+
+        <div class="contact-detail">
+          <i class="pro-icon">📍</i>
+          <span>Location: <strong>South Africa</strong></span>
+        </div>
+
+        <div class="contact-detail">
+          <i class="pro-icon">💼</i>
+          <span>LinkedIn:
+            <strong>
+              <a href="https://www.linkedin.com/in/sibusiso-makhiwane-b00b62273" target="_blank">
+                Sibusiso Makhiwane
+              </a>
+            </strong>
+          </span>
+          <div class="contact-detail">
+    <i class="pro-icon">🐙</i>
+    <span>GitHub:
+        <strong>
+            <a href="https://github.com/Sibu088" target="_blank">
+                github.com/Sibu088
+            </a>
+        </strong>
+    </span>
+</div>
+
+        </div>
+
+      </div>
+
+      <!-- Right Decorative Side -->
+      <div class="contact-right-pro">
+        <div class="pro-circle one"></div>
+        <div class="pro-circle two"></div>
+        <h3 class="pro-side-text">Available for Work, Internships & Projects</h3>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+  </div>
+</section>
+
+      
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="social-links">
+      <a href="#">📧</a>
+      <a href="#">💼</a>
+      <a href="#">🐙</a>
+      <a href="#">🐦</a>
+    </div>
+    <p>&copy; 2025 Sibusiso Makhiwane. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script>
+  // Smooth scrolling
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // Mobile menu toggle
+  const mobileMenu = document.querySelector('.mobile-menu');
+  const navLinks = document.querySelector('.nav-links');
+  if (mobileMenu && navLinks) {
+    mobileMenu.addEventListener('click', () => {
+      navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    });
+  }
+
+  // Contact form submission
+  document.querySelector('.contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert("Thank you for your message! I'll get back to you soon.");
+    this.reset();
+  });
+
+  // Scroll animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section').forEach(section => {
+    section.style.opacity = '0';
+    section.style.transform = 'translateY(30px)';
+    section.style.transition = 'all 0.6s ease-out';
+    observer.observe(section);
+  });
+
+  // Header background on scroll
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    if (header) {
+      if (window.scrollY > 100) {
+        header.style.background = 'rgba(255, 255, 255, 0.95)';
+        header.style.backdropFilter = 'blur(10px)';
+      } else {
+        header.style.background = '#fff';
+        header.style.backdropFilter = 'none';
+      }
+    }
+  });
+</script>
