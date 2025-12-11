@@ -672,208 +672,227 @@ window.onclick = function(event) {
                 </div>
         </div>
     </section>
-
 <!-- Projects Section -->
-<section id="projects" class="projects">
-  <div class="container">
-    <h2 class="section-title">Projects</h2>
-    <div class="projects-grid">
+<section id="projects" class="projects py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <h2 class="section-title text-4xl font-bold text-center mb-16 text-gray-800">
+      My Projects ✨
+    </h2>
 
-      <!-- Project 1 -->
-      <div class="project-card">
-        <div class="project-img">Banking App</div>
-        <div class="project-content">
-          <h3 class="project-title">Capitec App</h3>
-          <p class="project-description">
-            A modern mobile banking app featuring secure login, transaction tracking, and sleek UI.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">HTML</span>
-            <span class="tech-tag">CSS</span>
-            <span class="tech-tag">JavaScript</span>
+    <div class="projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+
+      <!-- 1. Capitec Banking App -->
+      <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+        <div class="project-img bg-gradient-to-br from-blue-500 to-purple-600 h-48 flex items-center justify-center text-white text-2xl font-bold">
+          💳 Banking App
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Capitec Banking App Clone</h3>
+          <p class="text-gray-600 text-sm mb-4">Modern mobile banking interface with secure login, transactions & responsive design.</p>
+          <div class="flex flex-wrap gap-2 mb-5">
+            <span class="tech-tag bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">HTML</span>
+            <span class="tech-tag bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-medium">CSS</span>
+            <span class="tech-tag bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-xs font-medium">JavaScript</span>
           </div>
-          <div class="project-links">
-            <a href="https://enchanting-maamoul-60f2fc.netlify.app/" target="_blank">🌐 Live Demo</a>
-            <a href="https://github.com/Sibu088/Capitec-App.git" target="_blank">💻 GitHub</a>
-            <a href="#home" class="back-home-btn">🏠 Back to Home</a>
+          <div class="flex gap-5 text-sm">
+            <a href="https://enchanting-maamoul-60f2fc.netlify.app/" target="_blank" class="text-blue-600 hover:underline">Live Demo</a>
+            <a href="https://github.com/Sibu088/Capitec-App.git" target="_blank" class="text-gray-700 hover:underline">GitHub</a>
           </div>
         </div>
       </div>
 
-      <!-- Project 2 -->
-      <div class="project-card">
-        <div class="project-img">Task Manager</div>
-        <div class="project-content">
-          <h3 class="project-title">Notepad App</h3>
-          <p class="project-description">
-            A productivity app with smart reminders, calendar, and organized notes.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">Node.js</span>
-            <span class="tech-tag">React.js</span>
-            <span class="tech-tag">CSS</span>
+      <!-- 2. Notepad Task Manager -->
+      <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+        <div class="project-img bg-gradient-to-br from-green-500 to-teal-600 h-48 flex items-center justify-center text-white text-2xl font-bold">
+          📝 Notepad Pro
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Notepad Task Manager</h3>
+          <p class="text-gray-600 text-sm mb-4">Productivity app with notes, smart reminders, and calendar integration.</p>
+          <div class="flex flex-wrap gap-2 mb-5">
+            <span class="tech-tag bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">React.js</span>
+            <span class="tech-tag bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Node.js</span>
+            <span class="tech-tag bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-medium">CSS</span>
           </div>
-          <div class="project-links">
-            <a href="https://sibu088.github.io/Notepad-app/" target="_blank">🌐 Live Demo</a>
-            <a href="https://github.com/Sibu088/Notepad-app" target="_blank">💻 GitHub</a>
-            <a href="#home" class="back-home-btn">🏠 Back to Home</a>
+          <div class="flex gap-5 text-sm">
+            <a href="https://sibu088.github.io/Notepad-app/" target="_blank" class="text-blue-600 hover:underline">Live Demo</a>
+            <a href="https://github.com/Sibu088/Notepad-app" target="_blank" class="text-gray-700 hover:underline">GitHub</a>
           </div>
         </div>
       </div>
 
-      <!-- Project 3 -->
-      <div class="project-card">
-        <div class="project-img">Weather App</div>
-        <div class="project-content">
-          <h3 class="project-title">Weather Dashboard</h3>
-          <p class="project-description">Real-time weather updates using API.</p>
-          <div class="project-tech">
-            <span class="tech-tag">JavaScript</span>
-            <span class="tech-tag">API</span>
+      <!-- 3. Weather Dashboard -->
+      <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+        <div class="project-img bg-gradient-to-br from-indigo-500 to-blue-600 h-48 flex items-center justify-center text-white text-2xl font-bold">
+          🌦️ Weather Live
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Weather Dashboard</h3>
+          <p class="text-gray-600 text-sm mb-4">Real-time weather updates and 5-day forecast using OpenWeather API.</p>
+          <div class="flex flex-wrap gap-2 mb-5">
+            <span class="tech-tag bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-xs font-medium">JavaScript</span>
+            <span class="tech-tag bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-xs font-medium">API</span>
           </div>
-          <div class="project-links">
-            <a href="https://sibu088.github.io/Weather-App/" target="_blank">🌐 Live Demo</a>
-            <a href="https://github.com/Sibu088/Weather-App" target="_blank">💻 GitHub</a>
-            <a href="#home" class="back-home-btn">🏠 Back to Home</a>
+          <div class="flex gap-5 text-sm">
+            <a href="https://sibu088.github.io/Weather-App/" target="_blank" class="text-blue-600 hover:underline">Live Demo</a>
+            <a href="https://github.com/Sibu088/Weather-App" target="_blank" class="text-gray-700 hover:underline">GitHub</a>
           </div>
         </div>
       </div>
 
-      <!-- Project 4 -->
-      <div class="project-card">
-        <div class="project-img">Employee CRUD</div>
-        <div class="project-content">
-          <h3 class="project-title">Employee CRUD App</h3>
-          <p class="project-description">Manage employees with create, read, update, delete functionality.</p>
-          <div class="project-tech">
-            <span class="tech-tag">JavaScript</span>
-            <span class="tech-tag">Firebase</span>
-            <span class="tech-tag">React.js</span>
-            <span class="tech-tag">HTMX</span>
+      <!-- 4. Employee CRUD App -->
+      <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+        <div class="project-img bg-gradient-to-br from-red-500 to-pink-600 h-48 flex items-center justify-center text-white text-2xl font-bold">
+          👥 Employee Manager
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Employee CRUD App</h3>
+          <p class="text-gray-600 text-sm mb-4">Full create, read, update, delete functionality with Firebase backend.</p>
+          <div class="flex flex-wrap gap-2 mb-5">
+            <span class="tech-tag bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs font-medium">React.js</span>
+            <span class="tech-tag bg-red-100 text-red-700 px-3 py-1 rounded-full text-xs font-medium">Firebase</span>
+            <span class="tech-tag bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">HTMX</span>
           </div>
-          <div class="project-links">
-            <a href="https://sibu088.github.io/employee-crud-firebase/" target="_blank">🌐 Live Demo</a>
-            <a href="https://github.com/Sibu088/employee-crud-firebase" target="_blank">💻 GitHub</a>
-            <a href="#home" class="back-home-btn">🏠 Back to Home</a>
+          <div class="flex gap-5 text-sm">
+            <a href="https://sibu088.github.io/employee-crud-firebase/" target="_blank" class="text-blue-600 hover:underline">Live Demo</a>
+            <a href="https://github.com/Sibu088/employee-crud-firebase" target="_blank" class="text-gray-700 hover:underline">GitHub</a>
           </div>
         </div>
       </div>
 
-      
-
-      <!-- Project 6 -->
-      <div class="project-card">
-        <div class="project-img">Alien Game</div>
-        <div class="project-content">
-          <h3 class="project-title">Alien Invasion Game</h3>
-          <p class="project-description">Defend Earth against alien waves. Built with Pygame.</p>
-          <div class="project-tech">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">Pygame</span>
+      <!-- 5. Alien Invasion Game -->
+      <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+        <div class="project-img bg-gradient-to-br from-purple-700 to-black h-48 flex items-center justify-center text-white text-2xl font-bold">
+          👾 Alien Invasion
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Alien Invasion Game</h3>
+          <p class="text-gray-600 text-sm mb-4">Classic space shooter — defend Earth from alien waves using Pygame.</p>
+          <div class="flex flex-wrap gap-2 mb-5">
+            <span class="tech-tag bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">Python</span>
+            <span class="tech-tag bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-medium">Pygame</span>
           </div>
-          <div class="project-links">
-            <a href="https://www.youtube.com/watch?v=6cNPqw-WizY" target="_blank">🌐 Live Demo</a>
-            <a href="https://github.com/Sibu088/Python" target="_blank">💻 GitHub</a>
-            <a href="#home" class="back-home-btn">🏠 Back to Home</a>
+          <div class="flex gap-5 text-sm">
+            <a href="https://www.youtube.com/watch?v=6cNPqw-WizY" target="_blank" class="text-blue-600 hover:underline">Watch Gameplay</a>
+            <a href="https://github.com/Sibu088/Python" target="_blank" class="text-gray-700 hover:underline">GitHub</a>
           </div>
         </div>
       </div>
 
-      <!-- Project 7 -->
-      <div class="project-card">
-        <div class="project-img">Sibu Game Comments App</div>
-        <div class="project-content">
-          <h3 class="project-title">Sibu Game Comments App</h3>
-          <p class="project-description">A web app for users to leave comments on games and play free games in a wishlist.</p>
-          <div class="project-tech">
-            <span class="tech-tag">Fullstack</span>
-            <span class="tech-tag">MERN Stack</span>
-            <span class="tech-tag">React.js</span>
+      <!-- 6. Sibu Game Comments App -->
+      <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+        <div class="project-img bg-gradient-to-br from-pink-500 to-rose-600 h-48 flex items-center justify-center text-white text-2xl font-bold">
+          🎮 Game Hub
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Sibu Game Comments App</h3>
+          <p class="text-gray-600 text-sm mb-4">Full-stack app for gamers to comment, rate, and wishlist free games.</p>
+          <div class="flex flex-wrap gap-2 mb-5">
+            <span class="tech-tag bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">MERN Stack</span>
+            <span class="tech-tag bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">React.js</span>
           </div>
-          <div class="project-links">
-            <a href="https://sibu088.github.io/sibu-comments-app/" target="_blank">🌐 Live Demo</a>
-            <a href="https://github.com/Sibu088/sibu-comments-app" target="_blank">💻 GitHub</a>
-            <a href="#home" class="back-home-btn">🏠 Back to Home</a>
+          <div class="flex gap-5 text-sm">
+            <a href="https://sibu088.github.io/sibu-comments-app/" target="_blank" class="text-blue-600 hover:underline">Live Demo</a>
+            <a href="https://github.com/Sibu088/sibu-comments-app" target="_blank" class="text-gray-700 hover:underline">GitHub</a>
           </div>
         </div>
       </div>
 
-      <!-- Project 8 -->
-      <div class="project-card">
-        <div class="project-img">QR Code Generator</div>
-        <div class="project-content">
-          <h3 class="project-title">QR Code Generator App</h3>
-          <p class="project-description">
-            Easily generate QR codes from custom user input. Useful for sharing links, text, and contact info.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">Django</span>
+      <!-- 7. QR Code Generator -->
+      <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+        <div class="project-img bg-gradient-to-br from-teal-500 to-cyan-600 h-48 flex items-center justify-center text-white text-2xl font-bold">
+          🔳 QR Master
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">QR Code Generator</h3>
+          <p class="text-gray-600 text-sm mb-4">Instantly generate QR codes from text, URLs, WiFi, contacts, etc.</p>
+          <div class="flex flex-wrap gap-2 mb-5">
+            <span class="tech-tag bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">Python</span>
+            <span class="tech-tag bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-medium">Django</span>
           </div>
-          <div class="project-links">
-            <a href="https://qr-code-sibusisomakhiwa.replit.app" target="_blank">🌐 Live Demo</a>
-            <a href="https://github.com/Sibu088/Qr-Code.git" target="_blank">💻 GitHub</a>
-            <a href="#home" class="back-home-btn">🏠 Back to Home</a>
+          <div class="flex gap-5 text-sm">
+            <a href="https://qr-code-sibusisomakhiwa.replit.app" target="_blank" class="text-blue-600 hover:underline">Live Demo</a>
+            <a href="https://github.com/Sibu088/Qr-Code.git" target="_blank" class="text-gray-700 hover:underline">GitHub</a>
           </div>
         </div>
       </div>
 
-    <!-- Project 10 -->
-<div class="project-card">
-  <div class="project-img">MedTech Connect</div>
-  <div class="project-content">
-    <h3 class="project-title">MedTech Connect</h3>
-    <p class="project-description">
-      I helped a client launch MedTech Connect — a next-gen healthcare connectivity platform now live and running smoothly.
-    </p>
-    <p class="project-description">
-      <strong>My Role:</strong><br>
-      • Full deployment on Render<br>
-      • Setup, configuration, security, and scaling<br>
-      • Ensured performance, responsiveness, and reliability
-    </p>
-    <div class="project-tech">
-      <span class="tech-tag">Django</span>
-      <span class="tech-tag">PostgreSQL</span>
-      <span class="tech-tag">Render</span>
-      <span class="tech-tag">Tailwind CSS</span>
-    </div>
-    <div class="project-links">
-      <a href="https://medtechconnect-1.onrender.com/" target="_blank">🌐 Live Demo</a>
-      <a href="https://github.com/Sibu088/MedTechConnect.git" target="_blank">💻 GitHub</a>
-      <a href="#home" class="back-home-btn">🏠 Back to Home</a>
+      <!-- 8. MedTech Connect (Client Project) -->
+      <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+        <div class="project-img bg-gradient-to-br from-emerald-500 to-teal-700 h-48 flex items-center justify-center text-white text-2xl font-bold">
+          🏥 MedTech Connect
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">MedTech Connect</h3>
+          <p class="text-gray-600 text-sm mb-2">Live healthcare connectivity platform deployed for a client.</p>
+          <p class="text-sm text-gray-500 mb-4"><strong>Role:</strong> Full deployment, security, scaling & performance on Render</p>
+          <div class="flex flex-wrap gap-2 mb-5">
+            <span class="tech-tag bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">Django</span>
+            <span class="tech-tag bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">PostgreSQL</span>
+            <span class="tech-tag bg-cyan-100 text-cyan-700 px-3 py-1 rounded-full text-xs font-medium">Render</span>
+            <span class="tech-tag bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-xs font-medium">Tailwind</span>
+          </div>
+          <div class="flex gap-5 text-sm">
+            <a href="https://medtechconnect-1.onrender.com/" target="_blank" class="text-blue-600 hover:underline">Live Site</a>
+            <a href="https://github.com/Sibu088/MedTechConnect.git" target="_blank" class="text-gray-700 hover:underline">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9. Platform-Aware CodeDebugger AI -->
+      <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+        <div class="project-img bg-gradient-to-br from-violet-600 to-indigo-800 h-48 flex items-center justify-center text-white text-2xl font-bold">
+          🤖 CodeDebugger AI
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">AI Code Debugger</h3>
+          <p class="text-gray-600 text-sm mb-4">Intelligent debugging tool that analyzes and fixes code across multiple languages.</p>
+          <div class="flex flex-wrap gap-2 mb-5">
+            <span class="tech-tag bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-medium">React</span>
+            <span class="tech-tag bg-cyan-100 text-cyan-700 px-3 py-1 rounded-full text-xs font-medium">Tailwind CSS</span>
+            <span class="tech-tag bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">PostgreSQL</span>
+            <span class="tech-tag bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs font-medium">AI</span>
+          </div>
+          <div class="flex gap-5 text-sm">
+            <a href="https://code-debugger-ai--mavismadira6.replit.app" target="_blank" class="text-blue-600 hover:underline">Live Demo</a>
+            <a href="https://github.com/Sibu088/Platform-Aware-CodeDebugger-AI.git" target="_blank" class="text-gray-700 hover:underline">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10. Strider Backend -->
+      <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+        <div class="project-img bg-gradient-to-br from-gray-800 to-black h-48 flex items-center justify-center text-white text-2xl font-bold">
+          🛠️ Strider API
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Strider Backend</h3>
+          <p class="text-gray-600 text-sm mb-3">Production Spring Boot REST API with full Swagger/OpenAPI documentation.</p>
+          <p class="text-sm text-gray-500 mb-4"><strong>Role:</strong> REST API design • Swagger UI • Docker containerization,Crud functionality</p>
+          <div class="flex flex-wrap gap-2 mb-5">
+            <span class="tech-tag bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">Spring Boot</span>
+            <span class="tech-tag bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Java</span>
+            <span class="tech-tag bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-medium">Swagger</span>
+            <span class="tech-tag bg-cyan-100 text-cyan-700 px-3 py-1 rounded-full text-xs font-medium">Docker</span>
+          </div>
+          <div class="flex gap-5 text-sm">
+            <a href="https://strider-backend--mavismadira6.replit.app" target="_blank" class="text-blue-600 hover:underline">Live API</a>
+            <a href="https://github.com/Sibu088/Strider-backend.git" target="_blank" class="text-gray-700 hover:underline">GitHub</a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
+</section>
+
+<!-- Back to Home Link -->
+<div class="text-center mt-10">
+  <a href="#home" class="text-blue-600 text-lg font-semibold hover:underline">
+    ⬅️ Back to Home
+  </a>
 </div>
 
- <!-- Project 11 -->
-<div class="project-card">
-  <div class="project-img">Platform-Aware-CodeDebugger-AI</div>
-  <div class="project-content">
-    <h3 class="project-title">Platform-Aware-CodeDebugger-AI</h3>
-    <p class="project-description">
-      A platform-aware AI code debugger that intelligently analyzes and debugs code across multiple programming languages, enhancing developer productivity.
-    </p>
-    <p class="project-description">
-      <strong>My Role:</strong><br>
-      • Full-stack development<br>
-      • Implemented AI-driven debugging features<br>
-    </p>
-    <p > Has old version ai and new version ai from replit.</p>
-    <div class="project-tech">
-      <span class="tech-tag">React</span>
-      <span class="tech-tag">Tailwind CSS</span>
-      <span class="tech-tag">JavaScript</span>
-      <span class="tech-tag">PostgreSQL</span>
-    </div>
-    <div class="project-links">
-      <a href="https://code-debugger-ai--mavismadira6.replit.app" target="_blank">🌐 Live Demo</a>
-       <a href="https://github.com/Sibu088/Platform-Aware-CodeDebugger-AI.git" target="_blank">💻 GitHub</a>
-      <a href="#home" class="back-home-btn">🏠 Back to Home</a>
-
-
-
-      
 
 <!-- 📞 Contact Section -->
 <section id="contact" class="contact">
